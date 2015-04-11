@@ -11,7 +11,7 @@ if (!is_array($data) && !is_object($data)) {
 
 class Exporter
 {
-    private $root = 'document';
+    private $root = 'postoffice';
     private $indentation = '    ';
     // TODO: private $this->addtypes = false; // type="string|int|float|array|null|bool"
 
@@ -19,7 +19,7 @@ class Exporter
     {
         $data = array($this->root => $data);
 
-        echo '<?xml version="1.0" encoding="UTF-8">';
+        echo '<?xml version="1.0" encoding="UTF-8" ?>';
         $this->recurse($data, 0);
         echo PHP_EOL;
     }
